@@ -1,0 +1,84 @@
+I.	Introdução
+Este documento especifica o sistema “A-CADÊ-MIA” e descreve o desenvolvimento de um sistema web para localização de academias e lojas do ramo fitness próximas ao usuário. Sua criação, idealizada pelos integrantes Christian Sangalli e Henderson Lima, tem características de STARTUP. O objetivo é proporcionar uma experiência conveniente para indivíduos interessados em encontrar facilmente locais para praticar exercícios físicos e adquirir produtos relacionados.
+
+II.	Descrição do sistema 
+O sistema “A-CADÊ-MIA” consiste na reunião de academias e lojas (suplementos, equipamentos e roupas) ligadas ao nicho de musculação, com as funções de: mapeamento, disponibilidade de produtos e reserva de produtos e serviços. Suas funções específicas ficam ligadas aos seus usuários. O objetivo do sistema é otimizar a escolha de um possível cliente da academia ou das lojas, da seguinte forma:
+
+Academia: O sistema irá mostrar ao USUÁRIO, seguindo seus filtros de pesquisa, a academia de acordo com as especificações dele. Exemplo: Um usuário que não tem transporte, prioriza uma academia mais próxima de sua casa, mas que atenda aos seus desejos. Já um usuário com transporte, prioriza uma academia que atenda aos seus desejos por um preço que ele consiga arcar.
+
+Lojas: O sistema irá mostrar ao USUÁRIO, seguindo seus filtros de pesquisa, o produto que ele procura de acordo com as especificações dele. Exemplo: Um USUÁRIO procura por uma creatina de marca e preço específicos, o sistema deve filtrar e entregar ao usuário-cliente aquilo que ele deseja.
+
+III. Descrição dos usuários:
+
+Usuário: Os clientes do site terão acesso parcial ao sistema e a interação será em ambiente online onde terão acesso aos dados pessoais mediante cadastro e ao layout básico do sistema, como as pesquisas e mapa.
+
+Administrador:
+
+- Academia: Esses usuários terão acesso completo do sistema e a interação será em ambiente online onde terão acesso aos dados do estabelecimento, área de cadastro de informações (endereço, preços, horários, serviços, equipamentos existentes no local) e uma área de desempenho (mostrando a quantidade de vezes que alguém visualizou o estabelecimento e a selecionou como escolha possível).
+
+- Lojas: Esses usuários terão acesso completo do sistema e a interação será em ambiente online onde terão acesso aos dados do estabelecimento, área de cadastro de informações (endereço, preços, horários, serviços, equipamentos existentes no local), cadastro de produtos (preço e informações do produto), uma área de rendimentos (mostrando os produtos que foram reservados e que a compra foi efetivada) e uma área de desempenho (mostrando a quantidade de vezes que alguém visualizou o estabelecimento e a selecionou como Escolha Possível).
+
+IV.	Listagem Requisitos:
+
+Requisitos Funcionais:
+[RF001] - Cadastro e Autenticação: Os usuários devem poder se cadastrar e fazer login no site. O sistema deve fornecer opções para login pelo Google, Redes Sociais ou Telefone. Os USUÁRIOS-ADMINISTRADORES devem se cadastrar utilizando CNPJ e Nome Fantasia do estabelecimento.
+[RF002] - Busca de Academias e Lojas relacionadas: Os USUÁRIOS-CLIENTES devem poder pesquisar academias e lojas relacionadas por localização geográfica. Deve ser possível visualizar uma lista de academias e lojas relacionadas encontradas, ordenadas pela proximidade e preços estabelecidos do usuário.
+[RF003] - Detalhes dos Estabelecimentos: Para cada academia, o sistema deve apresentar informações detalhadas, como endereço, horário de funcionamento, tipos de treinamento oferecidos, avaliações de usuários, preços etc. Para as lojas relacionadas, devem ser disponibilizadas informações sobre produtos vendidos, estoque de produtos, marcas disponíveis, horário de funcionamento, avaliações de usuários etc.
+[RF004] - Avaliações e Classificações: Os USUÁRIOS-CLIENTES devem poder avaliar e classificar academias e lojas relacionadas. As avaliações devem ser visíveis para outros USUÁRIOS-CLIENTES. Além disso, deve também selecionar o estabelecimento como escolha possível).
+[RF005] - Filtros de Pesquisa: Deve ser possível filtrar os resultados da pesquisa por critérios como distância do usuário, horário de funcionamento, tipos de serviços oferecidos, faixa de preço etc.
+[RF006] - Opções para produtos: Deve ser possível que os USUÁRIOS-CLIENTES reservem os produtos da loja para que possa efetivar a compra no estabelecimento de forma presencial. Além de uma opção para ser notificado quando o produto desejado entrar no estoque novamente e uma opção para que ele marque o estabelecimento como escolha possível.
+[RF007] - Rendimentos: Deve ser possível que o USUÁRIO-ADMINISTRADOR-LOJA tenha acesso a uma área que mostre os produtos a quantidade de vezes que os USUÁRIOS-CLIENTES visualizaram, reservaram ou adicionaram a opção de aviso de estoque dos produtos.
+[RF008] - Desempenho: Deve ser possível que o USUÁRIO-ADMINISTRADOR tenha acesso a uma área que mostre a quantidade de vezes que os USUÁRIO-CLIENTE visitaram seus estabelecimentos e os selecionaram como escolha possível.
+[RF009] - Notificações e Alertas: O sistema deve enviar notificações por e-mail, SMS ou push para os USUÁRIOS-CLIENTES sobre reservas, atualizações de estoque e promoções. USIÁRIOS-ADMINISTRADORES devem receber alertas sobre novas avaliações, reservas e movimentação de produtos.
+[RF010] - Integração com Mapas e Rotas: Exibir a localização dos estabelecimentos em mapas interativos. Permitir ao USUÁRIO-CLIENTE traçar rotas até a academia ou loja escolhida.
+[RF011] - Promoção e Ofertas: USUÁRIOS-ADMINISTRADORES podem lançar promoções e ofertas, a fim de angariar mais clientes. Os USUÁRIOS-CLIENTES devem receber notificações sobre essas promoções e ofertas.
+
+Requisitos Não-Funcionais:
+[NF001] - Usabilidade: O sistema deve ser intuitivo e fácil de usar, mesmo para usuários inexperientes. A interface do usuário deve ser responsiva e adaptável a diferentes dispositivos e tamanhos de tela.  
+[NF002] - Performance: O sistema deve ser capaz de lidar com um grande volume de dados de forma eficiente, garantindo tempos de resposta rápidos. 
+[NF003] - Segurança: Todas as informações dos usuários devem ser protegidas e armazenadas de forma segura. Deve ser implementado um sistema de permissões para garantir que apenas usuários autorizados possam acessar determinadas funcionalidades. Para os usuários-administradores, deve ser implementado uma criptografia para assegurar seus dados. 
+[NF004] - Confiabilidade: O sistema deve estar disponível e funcionando corretamente a maior parte do tempo. Deve ser implementado um sistema de backup para garantir a integridade dos dados em caso de falhas. 
+[NF005] - Escalabilidade: O sistema deve ser escalável para suportar um aumento no número de usuários e transações sem perda de performance.
+[NF006] - Portabilidade: O sistema deve ser capaz de rodar em diferentes plataformas (navegadores web e aplicativos móveis).
+[NF007] - Compliance e Conformidade: O sistema deve seguir as normas de proteção de dados (como a LGPD) para garantir privacidade e segurança dos usuários.
+[NF008] - Monitoramento e Logs: Registrar atividades críticas no sistema para auditoria e diagnóstico de erros. Administradores devem ter acesso a um painel com logs de acesso e ações importantes.
+[NF009] – Testabilidade: O sistema deve ser desenvolvido com boas práticas que permitam a realização de testes automatizados e manuais de forma eficiente.
+[NF010] - Manutenibilidade: O código deve ser bem documentado para facilitar a manutenção e futuras atualizações.
+
+Regra de Negócio:
+[RN001] - Limite no Cadastro de Produtos: Os U-A-L devem cadastrar um mínimo de 20 itens para serem aprovados na utilização do sistema.
+
+VI.	Como era antes:
+
+Academias e Lojas (Suplementos, Equipamentos e Roupas) e interação com o cliente:
+- O cliente interessado precisava fazer várias pesquisas independentes, consultando sites ou perfis de cada academia ou loja. Não havia uma plataforma única onde ele pudesse comparar diferentes estabelecimentos com base em seus filtros e preferências.
+- A informação sobre a localização das academias e lojas, produtos disponíveis, preços e especificações estava descentralizada e geralmente limitada ao que o cliente conseguia obter pelo contato direto com o estabelecimento.
+- A falta de um sistema de reserva centralizado dificultava a vida do cliente, que precisava contatar cada loja ou academia para verificar a disponibilidade de produtos e serviços, e não havia garantia de que o item ou serviço ainda estivesse disponível ao chegar no local.
+
+Para os Administradores de Academias e Lojas:
+- O acompanhamento de desempenho, como a quantidade de pessoas que visualizavam e optavam por seu estabelecimento, era geralmente inexistente ou limitado a relatórios manuais e estatísticas de redes sociais.
+- As academias e lojas dependiam de métodos tradicionais de publicidade e fidelização de clientes para atrair novos usuários, o que tornava o processo mais demorado e menos direcionado.
+- A reserva e controle de estoque de produtos era feito internamente, o que dificultava a visualização em tempo real do que estava disponível para o cliente e, consequentemente, a eficácia nas vendas.	
+
+VII. Como vai ficar:
+
+Academias e Lojas (Suplementos, Equipamentos e Roupas) e interação com o cliente:
+- O cliente interessado precisava fazer várias pesquisas independentes, consultando sites ou perfis de cada academia ou loja. Não havia uma plataforma única onde ele pudesse comparar diferentes estabelecimentos com base em seus filtros e preferências.
+- A informação sobre a localização das academias e lojas, produtos disponíveis, preços e especificações estava descentralizada e geralmente limitada ao que o cliente conseguia obter pelo contato direto com o estabelecimento.
+- A falta de um sistema de reserva centralizado dificultava a vida do cliente, que precisava contatar cada loja ou academia para verificar a disponibilidade de produtos e serviços, e não havia garantia de que o item ou serviço ainda estivesse disponível ao chegar no local.
+
+Para os Administradores de Academias e Loja:
+- O acompanhamento de desempenho, como a quantidade de pessoas que visualizavam e optavam por seu estabelecimento, era geralmente inexistente ou limitado a relatórios manuais e estatísticas de redes sociais.
+- As academias e lojas dependiam de métodos tradicionais de publicidade e fidelização de clientes para atrair novos usuários, o que tornava o processo mais demorado e menos direcionado.
+- A reserva e controle de estoque de produtos era feito internamente, o que dificultava a visualização em tempo real do que estava disponível para o cliente e, consequentemente, a eficácia nas vendas.
+
+VIII. Objetivos do Projeto
+
+O sistema visa oferecer as seguintes funcionalidades:
+- Localizar academias e lojas de suplementos próximas à localização do usuário.
+- Fornece informações detalhadas sobre cada academia, incluindo horário de funcionamento, serviços oferecidos, avaliações de usuários, entre outros.
+- Disponibilizar informações sobre as lojas de suplementos, como produtos disponíveis, horário de funcionamento, avaliações etc.
+- Permitir ao usuário avaliar academias e lojas de suplementos após a visita.
+- Oferecer filtros de pesquisa para refinar os resultados de acordo com as preferências do usuário.
+
+IX.	Conclusão: Este documento de requisitos serve como base para o desenvolver um sistema web de localização de academias e lojas relacionadas. É importante que os componentes aqui descritos sejam seguidos de forma a garantir uma experiência satisfatória para os usuários finais.
